@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.inomjon_2000.my_cantroller">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
         android:label="my_cantroller"
         android:icon="@mipmap/ic_launcher">
         <activity
