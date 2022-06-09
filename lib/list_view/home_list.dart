@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'news_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,12 +10,31 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
+  List<CurrencyNews> list = [];
+  final bool _isReference=true;
 
-  bool _isReference=true;
 
 
+  @override
+  void initState() {
+    super.initState();
+    getCurrencyNews();
+  }
+  Future<List<CurrencyNews>> getCurrencyNews() async{
+    var response = await http.get(Uri.parse("https://nbu.uz/uz/exchange-rates/json/"),);
+    if(response.statusCode == 200){
+      var data = jsonDecode(response.body);
+      (data as List).forEach((element) {
+        list.add(CurrencyNews.fromJson(element));
+        print(list[0].title);
+      });
+
+      return list;
+    }
+
+    throw UnimplementedError();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 12,
+                    itemCount: 20,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context, int index ){
                     return Row(
@@ -89,7 +112,8 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     buildReferece(),
                                     Icon(Icons.star,color: Colors.amber,size: 20,),
-                                    Text("Tajtiba: 12",style: TextStyle(fontSize: 12),)
+                                    // Text("Tajtiba: 12",style:  TextStyle(fontSize: 12),)
+                                    // Text(list[index].title.toString()??"---",style:  TextStyle(fontSize: 8),)
 
                                   ],
                                 ),
@@ -138,4 +162,5 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
+
 }
