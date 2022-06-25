@@ -92,7 +92,6 @@ class _AlarmDialogState extends State<AlarmDialog> {
                       ),
                     ),
                     _buildDosage(),
-                    _buildAddText(),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -194,25 +193,4 @@ class _AlarmDialogState extends State<AlarmDialog> {
     );
   }
 
-  Widget _buildAddText() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          TextField(
-              decoration: const InputDecoration(hintText: "Type in here"),
-              //onChanged is called whenever we add or delete something on Text Field
-              onSubmitted: (String str) {
-                setState(() {
-                  result = result + '\n' + str;
-                });
-                controller.text = "";
-              },
-              controller: controller),
-          //displaying input text
-          Text(result),
-        ],
-      ),
-    );
-  }
 }

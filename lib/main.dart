@@ -5,6 +5,10 @@ import 'package:my_cantroller/scaffold/scaffold_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'BabySchool/Pages/Register/fourth_register_page.dart';
+import 'BabySchool/Pages/SplashPage/splash_screen.dart';
+import 'BabySchool/Pages/SplashStart/splash_start.dart';
+import 'BabySchool/Screen/LoginScreen/login_screen.dart';
 import 'list_view/home_list.dart';
 import 'med_fox/add_text.dart';
 import 'med_fox/alarm_dialog.dart';
@@ -148,7 +152,8 @@ class _MyAppState extends State<MyApp> {
           //           ))
           //   ],
           // ),
-          body: MyStatefulWidget(text: '', text1: '',),
+          body: SplashScreen(),
+          // body: MyStatefulWidget(text: '', text1: '',),
         ),
       ),
     );
