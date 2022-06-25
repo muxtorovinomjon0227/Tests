@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_cantroller/BabySchool/constants/Colors/splashScreenColors.dart';
 
 import '../../Colors/splashScreenColors.dart';
 import 'fourth_register_page.dart';
@@ -80,11 +81,16 @@ class SethreeRegistorPage extends StatelessWidget {
       children: <Widget> [
         Padding(
           padding: const EdgeInsets.only(top: 242.2),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+          child:  Column(
             children: [
-              Image.asset("assets/images/SplashScreen/im_vector_right.png",
-                  height: 170, width: 170),
+              Container(height: MediaQuery.of(context).size.height*0.095),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset("assets/images/SplashScreen/im_vector_right.png",
+                      height: 170, width: 170),
+                ],
+              ),
             ],
           ),
         ),

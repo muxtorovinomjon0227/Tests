@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:my_cantroller/BabySchool/Pages/Register/sree_registor_step.dart';
+import 'package:my_cantroller/BabySchool/constants/Colors/splashScreenColors.dart';
 
 import '../../Colors/splashScreenColors.dart';
 
@@ -157,18 +158,19 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Stack(
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 94.1),
-                  child: Image.asset("assets/images/SplashScreen/im_vector_right.png",
+            Column(
+            children: [
+              Container(height: MediaQuery.of(context).size.height*0.2044),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset("assets/images/SplashScreen/im_vector_right.png",
                       height: 170, width: 170),
-                ),
-              ],
-            ),
+                ],
+              ),
+            ],
+          ),
             SizedBox(height: 10),
-
             Padding(
               padding: const EdgeInsets.only(top: 150),
               child: Center(

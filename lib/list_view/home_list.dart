@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
       //                       children: [
       //                         SizedBox(width: 4),
       //                         ClipOval(
-      //                           child: Image.asset("assets/img.png",height: 100,width: 100,)
+      //                           child: Image.asset("assets/ic_naps.png",height: 100,width: 100,)
       //                         ),
       //                         Padding(
       //                           padding: const EdgeInsets.only(left: 4,bottom: 10,top: 10),

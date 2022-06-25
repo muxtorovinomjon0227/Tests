@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_cantroller/BabySchool/Colors/splashScreenColors.dart';
-import 'package:my_cantroller/BabySchool/Screen/LoginScreen/login_screen.dart';
+import 'package:my_cantroller/BabySchool/constants/Colors/splashScreenColors.dart';
+
+import '../login_screen.dart';
 
 class SplashStart extends StatelessWidget {
   const SplashStart({Key? key}) : super(key: key);

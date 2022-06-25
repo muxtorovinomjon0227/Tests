@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_cantroller/BabySchool/constants/Colors/splashScreenColors.dart';
 import '../../Colors/splashScreenColors.dart';
 import 'econd_register_page.dart';
 
@@ -101,13 +102,15 @@ class RegisterStepPage extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+            Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 176.4),
-                  child: Image.asset("assets/images/SplashScreen/im_vector_right.png",
-                      height: 170, width: 170),
+                Container(height: MediaQuery.of(context).size.height*0.2967),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Image.asset("assets/images/SplashScreen/im_vector_right.png",
+                        height: 170, width: 170),
+                  ],
                 ),
               ],
             ),
