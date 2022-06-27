@@ -147,13 +147,13 @@ class _HomesPageState extends State<HomesPage> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: AppColors.dydeSplashScreenColor,
                   borderRadius: BorderRadius.circular(22),
                 ),
                 height: 44,
                 width: 130,
                 child: const Center(
-                    child: Text("Login Now",
+                    child: Text("Milestone",
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold))),
               ),
