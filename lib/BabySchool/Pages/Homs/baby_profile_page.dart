@@ -528,7 +528,7 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                       height: 44,
                       width: 130,
                       child: const Center(
-                          child: Text("Add Babysdajbhjbc",
+                          child: Text("Add Babys",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold))),
