@@ -73,19 +73,23 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                                 },
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 40, left: 25, right: 25),
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 20.0,
-                                child: ClipRRect(
-                                  child: Image.asset(
-                                    "assets/images/RegisterPage/im_baby_avatar.png",
-                                    height: 40,
-                                    width: 40,
+                            InkWell(
+                              onTap: () {
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 40, left: 25, right: 25),
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 20.0,
+                                  child: ClipRRect(
+                                    child: Image.asset(
+                                      "assets/images/RegisterPage/im_baby_avatar.png",
+                                      height: 40,
+                                      width: 40,
+                                    ),
+                                    borderRadius: BorderRadius.circular(50.0),
                                   ),
-                                  borderRadius: BorderRadius.circular(50.0),
                                 ),
                               ),
                             ),
@@ -102,48 +106,54 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                             color: AppColors.deydeColor2,
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  top:
-                                      MediaQuery.of(context).size.height * 0.28,
-                                  left: 25,
-                                  right: 25),
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 65.0,
-                                child: ClipRRect(
-                                  child: Image.asset(
-                                    "assets/images/RegisterPage/im_parker.png",
-                                  ),
-                                  borderRadius: BorderRadius.circular(50.0),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  top: MediaQuery.of(context).size.height * 0.3,
-                                  right: 80),
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(20)),
-                                  child: Icon(
-                                    Icons.arrow_back_sharp,
-                                    color: AppColors.SplashScreenTextColor,
+                        InkWell(
+                          onTap: () {
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: MediaQuery.of(context).size.height *
+                                        0.28,
+                                    left: 25,
+                                    right: 25),
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 65.0,
+                                  child: ClipRRect(
+                                    child: Image.asset(
+                                      "assets/images/RegisterPage/im_parker.png",
+                                    ),
+                                    borderRadius: BorderRadius.circular(50.0),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: EdgeInsets.only(
+                                    top: MediaQuery.of(context).size.height *
+                                        0.3,
+                                    right: 80),
+                                child: InkWell(
+                                  onTap: () {
+                                    _showAlarmDialog(context);
+                                  },
+                                  child: Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: Icon(
+                                      Icons.arrow_back_sharp,
+                                      color: AppColors.SplashScreenTextColor,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -167,7 +177,8 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
           Card(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -175,12 +186,18 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                       mainAxisAlignment: MainAxisAlignment.start,
-                      children:  [
-                         Text("Name",style: TextStyle(fontSize: 11),),
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Name",
+                          style: TextStyle(fontSize: 11),
+                        ),
                         SizedBox(height: 10),
-                        Text("Peeter Parker",style: TextStyle(color: AppColors.dydeSplashScreenColor),),
-
+                        Text(
+                          "Peeter Parker",
+                          style:
+                              TextStyle(color: AppColors.dydeSplashScreenColor),
+                        ),
                       ],
                     ),
                     IconButton(
@@ -193,7 +210,8 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
           Card(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -201,12 +219,18 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                       mainAxisAlignment: MainAxisAlignment.start,
-                      children:  [
-                         Text("Date of Birth",style: TextStyle(fontSize: 11),),
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Date of Birth",
+                          style: TextStyle(fontSize: 11),
+                        ),
                         SizedBox(height: 10),
-                        Text("6th July 2017",style: TextStyle(color: AppColors.dydeSplashScreenColor),),
-
+                        Text(
+                          "6th July 2017",
+                          style:
+                              TextStyle(color: AppColors.dydeSplashScreenColor),
+                        ),
                       ],
                     ),
                     IconButton(
@@ -219,7 +243,8 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
           Card(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -227,12 +252,18 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                       mainAxisAlignment: MainAxisAlignment.start,
-                      children:  [
-                         Text("Sex",style: TextStyle(fontSize: 11),),
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Sex",
+                          style: TextStyle(fontSize: 11),
+                        ),
                         SizedBox(height: 10),
-                        Text("Female",style: TextStyle(color: AppColors.dydeSplashScreenColor),),
-
+                        Text(
+                          "Female",
+                          style:
+                              TextStyle(color: AppColors.dydeSplashScreenColor),
+                        ),
                       ],
                     ),
                     IconButton(
@@ -245,7 +276,8 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
           Card(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -253,12 +285,18 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                       mainAxisAlignment: MainAxisAlignment.start,
-                      children:  [
-                         Text("Weight",style: TextStyle(fontSize: 11),),
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Weight",
+                          style: TextStyle(fontSize: 11),
+                        ),
                         SizedBox(height: 10),
-                        Text("15 kg",style: TextStyle(color: AppColors.dydeSplashScreenColor),),
-
+                        Text(
+                          "15 kg",
+                          style:
+                              TextStyle(color: AppColors.dydeSplashScreenColor),
+                        ),
                       ],
                     ),
                     IconButton(
@@ -272,19 +310,23 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
             elevation: 12,
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               constraints: const BoxConstraints(
                 maxHeight: double.infinity,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Padding(
-                    padding:  EdgeInsets.all(8.0),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Description",style: TextStyle(fontSize: 11),),
+                        Text(
+                          "Description",
+                          style: TextStyle(fontSize: 11),
+                        ),
                         IconButton(
                             onPressed: () {}, icon: const Icon(Icons.height)),
                       ],
@@ -292,14 +334,15 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text("Lorem ipsum dolor sit amet,"
-                        " consectetur adipiscing elit. Tellus "
-                        "nisl nisl, facilisis in consequat "
-                        "feugiat. Tortor, faucibus porttitor eu, "
-                        "in orci, maecenas dui sollicitudin tellus. "
-                        "Non quam senectus imperdiet quisque amet, et,"
-                        " dignissim sit convallis. Ut ridiculus diam in a."
-                      ,style: TextStyle(color: AppColors.dydeSplashScreenColor),
+                    child: Text(
+                      "Lorem ipsum dolor sit amet,"
+                      " consectetur adipiscing elit. Tellus "
+                      "nisl nisl, facilisis in consequat "
+                      "feugiat. Tortor, faucibus porttitor eu, "
+                      "in orci, maecenas dui sollicitudin tellus. "
+                      "Non quam senectus imperdiet quisque amet, et,"
+                      " dignissim sit convallis. Ut ridiculus diam in a.",
+                      style: TextStyle(color: AppColors.dydeSplashScreenColor),
                       softWrap: true,
                     ),
                   ),
@@ -307,36 +350,197 @@ class _BabyProfilePageState extends State<BabyProfilePage> {
               ),
             ),
           )
-
         ],
       ),
     );
   }
+
+  _showAlarmDialog(BuildContext context) {
+    showDialog(
+      barrierDismissible: true,
+      context: context,
+      builder: (BuildContext context) {
+        return  AlertDialog(
+          content: SizedBox(
+            width: 300,
+            height: 470,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                   const SizedBox(),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 65.0,
+                      child: ClipRRect(
+                        child: Image.asset(
+                          "assets/images/RegisterPage/im_parker.png",
+                        ),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                    ),
+                    const SizedBox(),
+                  ],
+                ),
+                Card(
+                  child: Container(
+                    width: double.infinity,
+                    decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Name",
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                "Peeter Parker",
+                                style:
+                                TextStyle(color: AppColors.dydeSplashScreenColor),
+                              ),
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.height)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: Container(
+                    width: double.infinity,
+                    decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Date of Birth",
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                "6th July 2017",
+                                style:
+                                TextStyle(color: AppColors.dydeSplashScreenColor),
+                              ),
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.height)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: Container(
+                    width: double.infinity,
+                    decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Sex",
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                "Female",
+                                style:
+                                TextStyle(color: AppColors.dydeSplashScreenColor),
+                              ),
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.height)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: Container(
+                    width: double.infinity,
+                    decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Weight",
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                "15 kg",
+                                style:
+                                TextStyle(color: AppColors.dydeSplashScreenColor),
+                              ),
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.height)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Center(
+                  child: InkWell(
+                    onTap: () {
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.dydeSplashScreenColor,
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      height: 44,
+                      width: 130,
+                      child: const Center(
+                          child: Text("Add Baby",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
+                    ),
+                  ),
+                ),
+
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 }
-
-///   Containerni Textning razmerigab qarab o'zgaradigan kod
-
-// Card(
-// elevation: 12,
-// child: Container(
-// color: Colors.green,
-// constraints: BoxConstraints(
-// maxHeight: double.infinity,
-// ),
-// child: Column(
-// children: [
-// Padding(
-// padding: const EdgeInsets.all(8.0),
-// child: Text(
-// 'Hello flutter...i like flutter...i like google...s,dfndfkjvlnkfvnjsebldkf,bvkdj,mvbkjvbxdjhbbvfdjbvj',
-// softWrap: true,
-// style: TextStyle(
-// color: Colors.black,
-// fontSize: 20,
-// ),
-// ),
-// ),
-// ],
-// ),
-// ),
-// )
