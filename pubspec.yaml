@@ -47,6 +47,10 @@ dependencies:
   flutter_time_picker_spinner: ^2.0.0
   particles_flutter: ^0.1.4
   neon_circular_timer: ^0.0.7
+  scroll_snap_list: ^0.8.3
+  file_picker: ^4.0.0
+  flutter_credit_card: ^3.0.1
+  sqflite: ^2.0.2
 
 
 

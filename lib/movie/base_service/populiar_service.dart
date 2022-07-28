@@ -9,9 +9,14 @@ class PopuliarService extends BaseService{
   dynamic responseJson;
 
   @override
-  Future getResponse(String url) async {
+  Future getResponse() async {
+
+    String uri = "https://api.themoviedb.org/3/movie/popular?api_key=30fb12640bc95f8270476cac8f158077";
+    var url = Uri.parse(uri);
+    final response = await http.get(url);
+    print(response);
     try{
-      final response = await  http.get(Uri.parse(API_HOST+url+API_KEY));
+      // final response = await  http.get(Uri.parse("https://api.themoviedb.org/3/movie/popular?api_key=30fb12640bc95f8270476cac8f158077"));
    responseJson = returnResponse(response);
     } on SocketException {
       throw Exception("Internet Error");

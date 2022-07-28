@@ -1,18 +1,38 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:my_cantroller/provider/home_page.dart';
 import 'package:my_cantroller/scaffold/scaffold_page.dart';
+import 'package:my_cantroller/widget/search_page.dart';
+import 'package:my_cantroller/widget/widget_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'BabySchool/Pages/Register/econd_register_page.dart';
 import 'BabySchool/Pages/Register/fourth_register_page.dart';
 import 'BabySchool/Pages/SplashPage/splash_screen.dart';
 import 'BabySchool/Pages/SplashStart/splash_start.dart';
 import 'BabySchool/Screen/LoginScreen/login_screen.dart';
+import 'Container/container_page.dart';
+import 'Duretion_indicator/indicator.dart';
+import 'FilePicker/file_picker_page.dart';
+import 'ListScrool/home_page.dart';
+import 'ListScrool/page_view.dart';
+import 'Navigation Pop(context dan malumot olib kelish)/push_page.dart';
+import 'Pageneytion/home_page.dart';
+import 'Pageneytion/pixcel.dart';
+import 'PlasticCard/card.dart';
+import 'Quitablae/home_page.dart';
+import 'RegisterApp/login_page.dart';
+import 'Timer/buttom_navigator_apbar.dart';
+import 'Timer/timer_page.dart';
+import 'andDrawer/home_page.dart';
+import 'kinolar/home_page.dart';
 import 'list_view/home_list.dart';
 import 'med_fox/add_text.dart';
 import 'med_fox/alarm_dialog.dart';
 import 'med_fox/med_fil.dart';
+import 'movie/ui/home_page.dart';
 import 'movie/wiew/view_model.dart';
 
 //
@@ -90,7 +110,7 @@ class _MyAppState extends State<MyApp> {
           scaffoldBackgroundColor: const Color(0xFF15202B),
         ),
         themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
-        home: Scaffold(
+        home:  Scaffold(
           // drawer: Drawer(
           //   child: Row(
           //     children: const [
@@ -152,7 +172,7 @@ class _MyAppState extends State<MyApp> {
           //           ))
           //   ],
           // ),
-          body: SplashScreen(),
+          body: KinolarPage(),
           // body: MyStatefulWidget(text: '', text1: '',),
         ),
       ),
@@ -169,7 +189,6 @@ class StaticDeta {
   static String IS_DARK_MODE = "is_dark_mode";
   static String IS_LIGHT_MODE = "is_light_mode";
 }
-
 
 
 

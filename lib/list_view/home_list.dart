@@ -11,11 +11,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<CurrencyNews> list = [];
   final bool _isReference = true;
+
   @override
   void initState() {
     super.initState();
     getCurrencyNews();
   }
+
+
   Future<List<CurrencyNews>> getCurrencyNews() async {
     var response = await http.get(
       Uri.parse("https://nbu.uz/uz/exchange-rates/json/"),
@@ -28,13 +31,6 @@ class _HomePageState extends State<HomePage> {
     }
     throw CircularProgressIndicator();
   }
-
-
-
-
-
-
-
 
 
   @override

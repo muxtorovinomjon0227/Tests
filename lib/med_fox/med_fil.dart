@@ -418,6 +418,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
               maxValue: 98,
               onChanged: (value) {
                 setState(() {
+
                   if( _isBoolTime2 == false) {
                     _currentValue2 = value;
                   }

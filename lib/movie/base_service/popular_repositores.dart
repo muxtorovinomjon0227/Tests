@@ -5,7 +5,9 @@ import 'package:my_cantroller/movie/models/movie_model.dart';
 class PopulrRepository{
   final BaseService _popularService = PopuliarService();
   Future<List<Movie>> fetchPopular() async{
-    dynamic response = await _popularService.getResponse("/popular");
+    // final response = await http.get(url);
+
+    dynamic response = await _popularService.getResponse();
     final data = response["results"] as List;
     print("bu yerda data $data");
 

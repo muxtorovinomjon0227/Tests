@@ -4,7 +4,7 @@ import 'package:my_cantroller/movie/wiew/view_model.dart';
 import 'package:provider/provider.dart';
 
 class HomePage2 extends StatefulWidget {
-  const HomePage2({Key? key}) : super(key: key);
+  const  HomePage2({Key? key}) : super(key: key);
 
   @override
   State<HomePage2> createState() => _HomePage2State();
@@ -28,8 +28,8 @@ class _HomePage2State extends State<HomePage2> {
           if (data.response.status == Status.ERROR) {
             return Center(
               child: Column(
-                children: [
-                  Image.asset("assets/internet.png"),
+                children: const [
+                 Text("Nimadir hato bo'ladi"),
                 ],
               ),
             );
