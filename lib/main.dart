@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:my_cantroller/provider/home_page.dart';
+import 'package:my_cantroller/provider/use_provider_page.dart';
 import 'package:my_cantroller/scaffold/scaffold_page.dart';
 import 'package:my_cantroller/widget/search_page.dart';
 import 'package:my_cantroller/widget/widget_page.dart';
@@ -16,11 +17,13 @@ import 'BabySchool/Screen/LoginScreen/login_screen.dart';
 import 'Container/container_page.dart';
 import 'Duretion_indicator/indicator.dart';
 import 'FilePicker/file_picker_page.dart';
+import 'GetSmsCode/sms_code_page.dart';
 import 'ListScrool/home_page.dart';
 import 'ListScrool/page_view.dart';
 import 'Navigation Pop(context dan malumot olib kelish)/push_page.dart';
 import 'Pageneytion/home_page.dart';
 import 'Pageneytion/pixcel.dart';
+import 'PinCode/pin_code_page.dart';
 import 'PlasticCard/card.dart';
 import 'Quitablae/home_page.dart';
 import 'RegisterApp/login_page.dart';
@@ -28,6 +31,7 @@ import 'Timer/buttom_navigator_apbar.dart';
 import 'Timer/timer_page.dart';
 import 'andDrawer/home_page.dart';
 import 'kinolar/home_page.dart';
+import 'kinolar/text_forfiled.dart';
 import 'list_view/home_list.dart';
 import 'med_fox/add_text.dart';
 import 'med_fox/alarm_dialog.dart';
@@ -172,7 +176,10 @@ class _MyAppState extends State<MyApp> {
           //           ))
           //   ],
           // ),
-          body: KinolarPage(),
+          body: SmsVerificationPage(),
+          // body: PinCodeVerificationScreen(
+          //     phoneNumber:
+          //     "+8801376221100"),
           // body: MyStatefulWidget(text: '', text1: '',),
         ),
       ),

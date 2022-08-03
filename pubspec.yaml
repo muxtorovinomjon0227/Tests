@@ -51,6 +51,10 @@ dependencies:
   file_picker: ^4.0.0
   flutter_credit_card: ^3.0.1
   sqflite: ^2.0.2
+  pin_code_fields: ^7.4.0
+  sms_autofill: 2.2.0
+#  audio_video_progress_bar: ^0.10.0
+
 
 
 

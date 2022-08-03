@@ -6,6 +6,7 @@ import 'package:my_cantroller/movie/models/movie_model.dart';
 class MainViewModel extends  ChangeNotifier {
   ApiResponse _apiResponse = ApiResponse.initial("initial");
   List<Movie> _movies = [];
+  int counter = 0;
 
   List<Movie> get movies {
     return _movies;
@@ -13,6 +14,7 @@ class MainViewModel extends  ChangeNotifier {
 
   ApiResponse get response {
     return _apiResponse;
+
   }
 
   Future fetPopular() async {
@@ -24,5 +26,23 @@ class MainViewModel extends  ChangeNotifier {
       _apiResponse = ApiResponse.error(e.toString());
     }
     notifyListeners();
+
   }
+
+
+  void incrementCounter() {
+    counter++;
+    notifyListeners();
+  }
+  void incrementCounterRemove() {
+    if(counter>0){
+      counter--;
+    }
+    notifyListeners();
+  }
+
+
+
+
+
 }
