@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:my_cantroller/scaffold/scaffold_page.dart';
+import 'package:my_cantroller/scroolBar/scrool_bar_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -152,7 +153,7 @@ class _MyAppState extends State<MyApp> {
           //           ))
           //   ],
           // ),
-          body: SplashScreen(),
+          body: ScroolBarPage(),
           // body: MyStatefulWidget(text: '', text1: '',),
         ),
       ),
